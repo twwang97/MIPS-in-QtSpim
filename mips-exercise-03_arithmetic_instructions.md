@@ -14,8 +14,9 @@
 ---
 
 (1) add as signed (2's complement) integers
+* e.g.,  $t0 = $t1 + $t2
 ```
-add	$t0,$t1,$t2	# $t0 = $t1 + $t2
+add	$t0,$t1,$t2
 ``` 
 
 (2) $t2 = $t3 - $t4
@@ -42,14 +43,14 @@ subu	$t1,$t6,$t7
 ```
 
 (6) multiply 32-bit quantities in $t3 and $t4, and store the 64-bit result in special registers Lo and Hi:  
-*     (Hi,Lo) = $t3 * $t4
+* (Hi,Lo) = $t3 * $t4
 ```
 mult	$t3,$t4
 ```
 
 (7) Division
-*     Lo = $t5 / $t6   (integer quotient)
-*     Hi = $t5 mod $t6   (remainder)
+* Lo = $t5 / $t6   (integer quotient)
+* Hi = $t5 mod $t6   (remainder)
 ```
 div	$t5,$t6
 ```
@@ -59,12 +60,13 @@ div	$t5,$t6
 mflo	$t1
 ```
 
-(9) move quantity in special register Hi to $t0 (i.e., $t0 = Hi)
+(9) move quantity in special register Hi to $t0 ,
+* i.e., $t0 = Hi
 ```
-mfhi	$t0	
+mfhi	$t0
 ```	
 
-(10) $t2 = $t3
+(10) move quantity $t2 = $t3
 ```
 move	$t2,$t3
 ```
