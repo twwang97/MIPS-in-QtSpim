@@ -1,7 +1,12 @@
 # Load / Store Instructions 
+
 * Objective: RAM access is only allowed with load and store instructions
+<br>
+
 * Author: David Wang
-* Last updated in Feb. 22, 2023
+* Last updated on Feb. 22, 2023
+
+---
 
 # A. load
 
@@ -17,21 +22,30 @@ lw	$t2, ($t0)
 ```
 lw	$t2, 4($t0)
 ```
-	
+
+
+---
+
 #### (A2) copy byte at source RAM location to low-order byte of destination register, and sign-extend to higher-order bytes
 ```
 lb	register_destination, RAM_source
 ```
+
+---
 
 #### (A3) load immediate value into destination register. 
 ```
 li	register_destination, value
 ```
 
+---
+
 #### (A4) copy RAM address of var1 (presumably a label defined in the program) into register $t0
 ```
 la	$t0, var1
 ```
+
+---
 
 
 # B. store
@@ -48,6 +62,8 @@ sw	$t2, ($t0)
 ```
 sw	$t2, -12($t0)
 ```
+
+---
 
 #### (B2) store byte (low-order) in source register into RAM destination
 ```
