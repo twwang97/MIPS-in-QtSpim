@@ -1,71 +1,46 @@
-# Load / Store Instructions 
-
-* Objective: RAM access is only allowed with load and store instructions
-<br>
+# Introduction
 
 * Author: David Wang
 * Last updated on Feb. 22, 2023
 
----
+## Data types:
 
-# A. load
-
-#### (A1) copy word (4 bytes) at source RAM location to destination register.
-```
-lw	register_destination, RAM_source
-```
-* E.g., load word at RAM address contained in $t0 into $t2 
-```
-lw	$t2, ($t0)
-```
-* E.g., load word at RAM address ($t0+4) into register $t2, where "4" gives offset from address in register $t0 (indirect addressing)
-```
-lw	$t2, 4($t0)
-```
-
+* Instructions are all 32 bits
+* byte (**8 bits**), halfword (**2 bytes**), word (**4 bytes**)
+* a character requires **1 byte** of storage
+* an integer requires 1 word (**4 bytes**) of storage
 
 ---
 
-#### (A2) copy byte at source RAM location to low-order byte of destination register, and sign-extend to higher-order bytes
-```
-lb	register_destination, RAM_source
-```
+## Registers
+* 32 general-purpose registers
+* register preceded by $ in assembly language instruction
+<br>
 
----
+(column name) <br> 
 
-#### (A3) load immediate value into destination register. 
-```
-li	register_destination, value
-```
+```Register Number``` , (Full) **Name** , Description <br>
 
----
+```0``` , **zero** , the value 0 <br>
 
-#### (A4) copy RAM address of var1 (presumably a label defined in the program) into register $t0
-```
-la	$t0, var1
-```
+```1``` , (assembler temporary) **at** , **reserved** by the assembler <br>
 
----
+```2, 3``` , (values) **$vo, $v1** , from expression evaluation and function results <br>
 
+```4, 5, 6, 7``` , (arguments) **$a0, $a1, $a2, $a3** ,  First four parameters for subroutine. <br>
 
-# B. store
+```8, 9, ..., 15``` , (temporaries) **$t0, $t1, ..., $t7** , Caller saved if needed. Subroutines can use w/out saving. <br>
 
-#### (B1) store word in source register into RAM destination
-```
-sw	register_source, RAM_destination
-```
-* E.g., store word in register $t2 into RAM at address contained in $t0
-```
-sw	$t2, ($t0)
-```
-* E.g., store word in register $t2 into RAM at address ($t0 - 12) (indirect addressing)
-```
-sw	$t2, -12($t0)
-```
+```16, 17, ..., 23``` , (saved values) **$s0, $s1, ..., $s7** , Callee saved. **Preserved** across procedure calls <br>
 
----
+```24, 25``` , (temporaries) **$t8, $t9** , Caller saved if needed. <br>
 
-#### (B2) store byte (low-order) in source register into RAM destination
-```
-sb	register_source, RAM_destination
-```
+```26, 27``` , **$k0, $k1** , **reserved** for use by the interrupt/trap handler <br>
+
+``` 28 ``` , (global pointer) **$gp** , Points to the middle of the 64K block of memory in the static data segment. <br>
+
+``` 29 ``` , (stack pointer) **$sp** , Points to last location on the stack <br>
+
+``` 30 ``` , (frame pointer) **$fp** , **Preserved** across procedure calls <br>
+
+``` 31 ``` , (return address) **$ra** , return address <br>
