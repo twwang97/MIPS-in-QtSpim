@@ -7,7 +7,7 @@
 #### [Registers](#registers-1)
 #### [Data Transfer](#load--store-instructions)
 #### [Arithmetic Instructions](#arithmetic-instructions-1)
-#### [System Call](#system-calls-and-i--O)
+#### [System Call](#system-calls-and-i--o)
 Tha summarized table of MIPS instruction set could be found [here](#registers-1)
 
 # Data types:
