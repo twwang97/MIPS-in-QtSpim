@@ -5,9 +5,9 @@
 
 # MIPS Quick Tutorial
 #### [Registers](#registers-1)
-#### [Data Transfer](#load--store-instructions-1)
+#### [Data Transfer](#load--store-instructions)
 #### [Arithmetic Instructions](#arithmetic-instructions-1)
-#### [System Call](#System-Calls-and-I--O-1)
+#### [System Call](#System-Calls-and-I--O)
 Tha summarized table of MIPS instruction set could be found [here](#registers-1)
 
 # Data types:
@@ -226,6 +226,6 @@ move	$t2,$t3
 <br>
 
 # References: 
-[1] MIPS Architecture and Assembly Language [Tutorial] (https://minnie.tuhs.org/CompArch/Resources/mips_quick_tutorial.html) <br>
+[1] MIPS Architecture and Assembly Language [Tutorial](https://minnie.tuhs.org/CompArch/Resources/mips_quick_tutorial.html) <br>
 [2] MIPS Examples from [ffcabbar's Github](https://github.com/ffcabbar/MIPS-Assembly-Language-Examples) <br>
 [3] Merge Sort from [henrykorir's Github](https://github.com/henrykorir/MergeSortInMIPS) <br>
