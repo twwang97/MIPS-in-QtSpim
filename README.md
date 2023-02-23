@@ -1,14 +1,14 @@
 # MIPS in QtSpim: Exercise
 
-* Assembly Language: ```MIPS```
-* Simulator that runs MIPS32 programs: ```QtSpim```
+This repository includes some exercises written in ```MIPS```, <br>
+and the program written in each assembler source code file ```*.asm``` could be run in a simulator called ```QtSpim```.
 
 # MIPS Quick Tutorial
 #### [Registers](#registers-1)
 #### [Data Transfer](#load--store-instructions)
 #### [Arithmetic Instructions](#arithmetic-instructions-1)
 #### [System Call](#system-calls-and-io)
-Tha summarized table of MIPS instruction set could be found [here](https://github.com/twwang97/MIPS-in-QtSpim/blob/main/mips-Instruction_Set.pdf)
+* Tha summarized table of MIPS instruction set could be found [here](https://github.com/twwang97/MIPS-in-QtSpim/blob/main/mips-Instruction_Set.pdf). 
 
 # Data types:
 
