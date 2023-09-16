@@ -222,7 +222,7 @@ move	$t2,$t3
 ```10``` , **exit**,
 <br>
 
-# References: 
+# References
 [1] MIPS Architecture and Assembly Language [Tutorial](https://minnie.tuhs.org/CompArch/Resources/mips_quick_tutorial.html) <br>
 [2] MIPS Examples from [ffcabbar's Github](https://github.com/ffcabbar/MIPS-Assembly-Language-Examples) <br>
 [3] Merge Sort from [henrykorir's Github](https://github.com/henrykorir/MergeSortInMIPS) <br>
